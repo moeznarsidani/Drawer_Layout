@@ -15,7 +15,7 @@ namespace drawerlayout
     [Activity(Label = "@string/app_name", Theme = "@style/MyTheme", MainLauncher = true)]
     public class MainActivity : AppCompatActivity
     {
-        private Android.Support.V4.Widget.DrawerLayout drawerLayout;
+        private Android.Support.V4.Widget.DrawerLayout drawerLayout1;
         private NavigationView navView;
         protected override void OnCreate(Bundle bundle)
         {
@@ -27,7 +27,7 @@ namespace drawerlayout
             SupportActionBar.SetDisplayHomeAsUpEnabled(true);
             SupportActionBar.SetHomeButtonEnabled(true);
             //SupportActionBar.SetHomeAsUpIndicator(Resource.Id.right_icon);
-            drawerLayout = FindViewById<Android.Support.V4.Widget.DrawerLayout>(Resource.Id.drawer_layout);
+            drawerLayout1 = FindViewById<Android.Support.V4.Widget.DrawerLayout>(Resource.Id.drawer_layout);
             navView = FindViewById<NavigationView>(Resource.Id.nav_view);
 
         }
@@ -37,7 +37,7 @@ namespace drawerlayout
             switch(item.ItemId)
             {
                 case Resource.Id.home:
-                    drawerLayout.OpenDrawer(Android.Support.V4.View.GravityCompat.Start);
+                    drawerLayout1.OpenDrawer(Android.Support.V4.View.GravityCompat.Start);
                     return true;
             }
             return base.OnOptionsItemSelected(item);
